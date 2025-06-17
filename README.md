@@ -41,13 +41,14 @@
 ## Workday Progress
 
 ### Day 1
-
-- สร้าง Next.js Project ด้วย `npx create-next-app`
-- ติดตั้งและตั้งค่า Tailwind CSS (`tailwindcss`, `postcss`, `autoprefixer`)
-- ติดตั้ง Shadcn/UI และตั้งค่าเบื้องต้น
+- สร้าง Next.js Project ด้วย `npx create-next-app@latest`
+- ติดตั้ง Tailwind CSS และ Shadcn/UI
 - ทดสอบรัน Development Server (`npm run dev`) แสดงหน้าแรกได้สำเร็จ
-- สร้างไฟล์ `.gitignore` สำหรับ Next.js โปรเจกต์
+- สร้างไฟล์ `.gitignore` และ `README.md` สำหรับ Next.js โปรเจกต์
 - Push โค้ดเริ่มต้นขึ้น GitHub
+
+### Day 2
+- ไม่มีส่วนที่แก้ไข Frontend
 
 ---
 
