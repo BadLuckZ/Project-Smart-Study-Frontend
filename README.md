@@ -41,6 +41,7 @@
 ## Workday Progress
 
 ### Day 1
+
 - สร้าง Next.js Project ด้วย `npx create-next-app@latest`
 - ติดตั้ง Tailwind CSS และ Shadcn/UI
 - ทดสอบรัน Development Server (`npm run dev`) แสดงหน้าแรกได้สำเร็จ
@@ -48,7 +49,17 @@
 - Push โค้ดเริ่มต้นขึ้น GitHub
 
 ### Day 2
+
 - ไม่มีส่วนที่แก้ไข Frontend
+
+### Day 3
+
+- ตั้งค่า Firebase Project + เปิด Google Auth
+- ติดตั้ง Firebase SDK
+- สร้างไฟล์ config สำหรับ Firebase
+- สร้างหน้า Login และปุ่ม Google Sign-in
+- Redirect เมื่อ Login สำเร็จ
+- Push โค้ดทั้งหมดขึ้น GitHub (มี env.md ชี้แจง ENV)
 
 ---
 
