@@ -13,6 +13,7 @@ import { ReactNode, useEffect, useState } from "react";
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   const handleSignout = async () => {
@@ -34,13 +35,21 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
     return () => unsubscribe();
   }, []);
 
+  // When no user, go back to Home Page
+  useEffect(() => {
+    if (!loading && !user) {
+      router.replace("/");
+    }
+  }, [user, loading]);
+
   return (
     <AuthContext.Provider value={{ user, setUser, handleSignout, handleLogin }}>
-      {children}
+      {!loading && children}
     </AuthContext.Provider>
   );
 };
