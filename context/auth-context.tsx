@@ -8,6 +8,7 @@ interface AuthContextProps {
   setUser: (user: User) => void;
   handleLogin: () => void;
   handleSignout: () => void;
+  getUserToken: () => Promise<string>;
 }
 
 export const AuthContext = createContext<AuthContextProps | undefined>(

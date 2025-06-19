@@ -3,6 +3,7 @@
 import { AuthContext } from "@/context/auth-context";
 import { auth, provider } from "@/lib/firebase";
 import {
+  getAuth,
   onAuthStateChanged,
   signInWithPopup,
   signOut,
@@ -31,6 +32,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const getUserToken = async (): Promise<string> => {
+    const user = getAuth().currentUser;
+    if (user) {
+      const token = await user.getIdToken();
+      return token;
+    }
+    return "";
+  };
   // When users refresh the page, they're still logged in.
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -48,7 +57,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, [user, loading]);
 
   return (
-    <AuthContext.Provider value={{ user, setUser, handleSignout, handleLogin }}>
+    <AuthContext.Provider
+      value={{ user, setUser, handleSignout, handleLogin, getUserToken }}
+    >
       {!loading && children}
     </AuthContext.Provider>
   );
