@@ -59,7 +59,11 @@
 - สร้างไฟล์ config สำหรับ Firebase
 - สร้างหน้า Login และปุ่ม Google Sign-in
 - Redirect เมื่อ Login สำเร็จ
-- Push โค้ดทั้งหมดขึ้น GitHub (มี env.md ชี้แจง ENV)
+- Push โค้ดทั้งหมดขึ้น GitHub (มี `env.md` ชี้แจง `.env`)
+
+### Day 4
+
+- เพิ่มการแสดง UserToken ใน DashboardPage และคัดลอกอัตโนมัติเมื่อกดที่ UserToken (เพื่อนำไปเป็น Bearer Token)
 
 ---
 
