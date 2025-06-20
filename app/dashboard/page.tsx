@@ -11,7 +11,7 @@ const DashboardPage = () => {
       <Navbar />
       <div className="flex flex-col gap-2 p-4">
         <h1 className="text-2xl font-bold">
-          {`Hello ${user?.displayName} (${user?.email})! This is Dashboard Page`}
+          {`Welcone to Smart Study, ${user?.displayName}!`}
         </h1>
       </div>
     </>

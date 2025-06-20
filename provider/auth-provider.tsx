@@ -80,10 +80,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return () => unsubscribe();
   }, []);
 
-  // ถ้าไม่มีผู้ใช้ล็อกอิน ให้พาไปหน้าแรก
+  // ถ้าไม่มีผู้ใช้ล็อกอิน ให้พาไปหน้า Login
   useEffect(() => {
     if (!isUserLoading && !user) {
-      router.replace("/");
+      router.replace("/login");
     }
   }, [user, isUserLoading]);
 
