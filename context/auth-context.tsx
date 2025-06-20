@@ -1,10 +1,13 @@
 "use client";
 
+import { UserDataType } from "@/utils/type";
 import { User } from "firebase/auth";
 import { createContext, useContext } from "react";
 
 interface AuthContextProps {
   user: User | null;
+  isUserDataLoading: boolean;
+  userData: UserDataType;
   setUser: (user: User) => void;
   handleLogin: () => void;
   handleSignout: () => void;
