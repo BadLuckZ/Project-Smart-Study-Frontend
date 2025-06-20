@@ -65,6 +65,16 @@
 
 - เพิ่มการแสดง UserToken ใน DashboardPage และคัดลอกอัตโนมัติเมื่อกดที่ UserToken (เพื่อนำไปเป็น Bearer Token)
 
+### Day 5
+
+- นำ UserToken ใน Dashboard Page ออก
+- สร้างฟังก์ชัน `fetchUserData` ด้วย Axios เพื่อเรียก API `/api/user/me` ที่ Backend (แนบ Bearer Token ใน header)
+- เก็บข้อมูล user ที่ได้จาก Backend ใน `AuthProvider`
+- สร้าง Account Page สำหรับแสดงชื่อ อีเมล และรูปภาพผู้ใช้ที่ล็อกอิน และปุ่ม Logout
+- สร้าง Navbar Component ที่ navigate หน้า Dashboard กับหน้า Account
+- ทดสอบ Logout แล้วป้องกันการเข้าถึงข้อมูล user (Redirect กลับมาที่ `/`)
+- Layout และ Navbar รองรับ Responsive Design
+
 ---
 
 ## หมายเหตุ
