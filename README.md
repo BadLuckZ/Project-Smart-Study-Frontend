@@ -75,6 +75,11 @@
 - ทดสอบ Logout แล้วป้องกันการเข้าถึงข้อมูล user (Redirect กลับมาที่ `/`)
 - Layout และ Navbar รองรับ Responsive Design
 
+### Day 6
+
+- เพิ่ม Dark Theme ของ Shadcn
+- หากไม่มี User จะ Redirect ไปที่ Login Page (`/login`)
+
 ---
 
 ## หมายเหตุ
